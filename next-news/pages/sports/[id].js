@@ -1,12 +1,16 @@
 import styles from '../../styles/Feed.module.css'
 import { useRouter } from 'next/router';
 import { Navbar } from '../../component/navbar';
+import Head from 'next/head';
 
 export const Feed = ({ pageNumber, articles }) => {
   const router = useRouter();
 
   return (
     <div className="page-container">
+      <Head>
+        <title>Sports News</title>
+      </Head>
       < Navbar />
       <div className={styles.main}>
         {articles.map((articles, index) => (
